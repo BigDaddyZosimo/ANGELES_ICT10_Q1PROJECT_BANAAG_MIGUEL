@@ -3,55 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workin w numbers nd forms</title>
+    <title>SKU Generator</title>
 
-<!-- PyScript -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input, button {
+            padding: 8px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+
     <link rel="stylesheet"
           href="https://pyscript.net/releases/2025.2.4/core.css">
 
     <script type="module"
             src="https://pyscript.net/releases/2025.2.4/core.js">
     </script>
-    </head>
+</head>
+
 <body>
 
-    <h1>Simle calc</h1>
-    <p>enter two num nd pick an opp</p>
+    <h1>SKU Generator</h1>
+    <p>Enter the product information</p>
 
-    <label for="num1">first num</label>
-    <input type="number" id="num1">
-
-    <br><br>
-
-    <label>Select opp</label>
-    <select id="operation">
-      <option value="+">Addition (+)</option>
-       <option value="-">Subtraction (-)</option>
-        <option value="*">Multiplication (*)</option>
-         <option value="/">Division (/)</option>
-    </select>
+    <label for="category">Product Category</label>
+    <input type="text" id="category">
 
     <br><br>
 
-     <label for="num2">sec num</label>
-    <input type="number" id="num2">
+    <label for="product">Product Name</label>
+    <input type="text" id="product">
+
     <br><br>
 
-    <button py-click="compute">COMPUTE</button>
+    <label for="quantity">Stock Quantity</label>
+    <input type="number" id="quantity">
+
     <br><br>
-    
+
+    <button py-click="generate">GENERATE SKU</button>
+
     <div id="result">
-        Result here
+        SKU here
     </div>
 
     <script type="py" src="./main.py"></script>
-    <br><br>
 
-
-
-
-
-
-    
 </body>
 </html>

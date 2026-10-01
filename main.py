@@ -1,25 +1,14 @@
 from pyscript import document
 
-def compute(event):
+def generate(event):
 
-    num1 = float(document.querySelector("#num1").value)
-    num2 = float(document.querySelector("#num2").value)
+    category = document.querySelector("#category").value
+    product = document.querySelector("#product").value
+    quantity = document.querySelector("#quantity").value
 
-    operation = document.querySelector("#operation").value
+    category = category[:3].upper()
+    product = product[:3].upper()
 
-    if operation == "+":
-        answer = num1+num2
+    sku = category + product + quantity
 
-    if operation == "-":
-        answer = num1-num2
-
-    if operation == "*":
-       answer = num1*num2
-
-    if operation == "/":
-
-     if num2 == 0:
-       document.querySelector("#result").innerText = "Cant divide by zero bro" 
-       return
-
-       answer = num1/num2
+    document.querySelector("#result").innerText = "SKU: " + sku
