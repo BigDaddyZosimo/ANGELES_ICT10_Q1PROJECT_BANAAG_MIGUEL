@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workin w numbers nd forms</title>
+
+<!-- PyScript -->
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.2.4/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.2.4/core.js">
+    </script>
+    </head>
+<body>
+
+    <h1>Simle calc</h1>
+    <p>enter two num nd pick an opp</p>
+
+    <label for="num1">first num</label>
+    <input type="number" id="num1">
+
+    <br><br>
+
+    <label>Select opp</label>
+    <select id="operation">
+      <option value="+">Addition (+)</option>
+       <option value="-">Subtraction (-)</option>
+        <option value="*">Multiplication (*)</option>
+         <option value="/">Division (/)</option>
+    </select>
+
+    <br><br>
+
+     <label for="num2">sec num</label>
+    <input type="number" id="num2">
+    <br><br>
+
+    <button py-click="compute">COMPUTE</button>
+    <br><br>
+    
+    <div id="result">
+        Result here
+    </div>
+
+    <script type="py" src="./main.py"></script>
+    <br><br>
+
+
+
+
+
+
+    
+</body>
+</html>
